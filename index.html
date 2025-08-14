@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Growcapss - Control de Inversiones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Growcapss</h1>
+    <button id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+    <nav id="menu-nav">
+      <button onclick="mostrarSeccion('inversiones')">Inversiones</button>
+      <button onclick="mostrarSeccion('ventas')">Ventas</button>
+      <button onclick="mostrarSeccion('proveedores')">Proveedores</button>
+      <button onclick="mostrarSeccion('estadisticas')">Estadísticas</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INVERSIONES -->
+    <section id="inversiones" class="seccion">
+      <h2>Inversiones</h2>
+      <form id="form-inversiones" onsubmit="event.preventDefault(); agregarInversion();">
+        <input id="inversion-producto" placeholder="Producto (Ej. Gorra)" required />
+        <input id="inversion-monto" type="number" min="0" step="0.01" placeholder="Monto invertido" required />
+        <input id="inversion-stock" type="number" min="0" step="1" placeholder="Stock inicial" required />
+        <select id="inversion-proveedor" required>
+          <option value="">Seleccionar proveedor</option>
+        </select>
+        <input id="inversion-detalle" placeholder="Detalle adicional (opcional)" />
+        <button type="submit">Agregar inversión</button>
+      </form>
+      <ul id="lista-inversiones" class="lista"></ul>
+    </section>
