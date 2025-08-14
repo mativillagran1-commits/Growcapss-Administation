@@ -32,3 +32,72 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 24px;
+}
+
+#menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-btn div {
+  height: 3px;
+  background-color: var(--color-blanco);
+  border-radius: 2px;
+}
+
+nav#menu-nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav#menu-nav button {
+  background: none;
+  border: 1px solid var(--color-blanco);
+  color: var(--color-blanco);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.seccion {
+  padding: 20px;
+}
+
+form input, form select, form button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+form button {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: darkgreen;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  border: 1px solid var(--color-plomo);
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
